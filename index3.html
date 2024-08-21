@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Afonso Rodrigues</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 60px;
+            box-shadow: 0px 2px 3.4px 0.6px rgba(5, 3, 3, 0.2);
+            position: fixed;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        #logo {
+            width: 90px;
+        }
+
+        .nav_links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin-right: 200px;
+        }
+
+        .links {
+            color: rgb(22, 22, 22);
+            text-decoration: none;
+        }
+
+        .corpo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(50deg, #400082, #FE326E, #400082);
+            justify-content: center;
+            margin-top: 80px; /* Ajuste para o header fixo */
+            width: 100%;
+            height: 150px;
+            color: rgb(255, 255, 255);
+        }
+
+        .servicos {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-top: 10px;
+            margin-top: 20px;
+            gap: 10px;
+            flex-wrap: wrap; /* Para responsividade */
+        }
+
+        .categoria {
+            text-align: center;
+            color: #2c2c2c;
+            font-size: 11px;
+            background-color: #ffffff;
+            width: 250px;
+            height: 150px;
+            border-radius: 5px;
+            box-shadow: 0 0 50px #b3b2b2;
+            padding: 10px;
+        }
+
+        .icone {
+            width: 75px;
+        }
+
+        .sobre_criador {
+            background-color: #a8a8a8;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        #foto {
+            width: 80px;
+            border-radius: 50%;
+            margin-top: -50px;
+            margin-left: 500px;
+        }
+
+        .footer {
+            bottom: 0;
+            background-color: #1d1d1d;
+            width: 100%;
+            height: 200px;
+            text-align: center;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .nav_links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .servicos {
+                flex-direction: column;
+            }
+
+            .categoria {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <img id="logo" src="icones/logo.svg" alt="logo">
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#" class="links">Página Inicial</a></li>
+                <li><a href="#" class="links">Contatos</a></li>
+                <li><a href="#" class="links">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="corpo">
+        <h1>Afonso Rodrigues</h1>
+        <p>Designer Gráfico e Técnico de Redes</p>
+        <img src="IMG20240428114907.jpg" alt="o criador desse site" id="foto">
+    </div>
+
+    <div class="servicos">
+        <div class="categoria">
+            <img src="icones/Icone2.svg" alt="" class="icone">
+            <h1>Design Gráfico</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="categoria">
+            <img src="icones/Icone1.svg" alt="" class="icone">
+            <h1>Web Design</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="categoria">
+            <img src="icones/Icone3.svg" alt="" class="icone">
+            <h1>Redes de Computador</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+
+    <div class="sobre_criador">
+        <h2>Sobre o Criador</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse aut aspernatur quod.</p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2023 Afonso Rodrigues. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para exibir um alerta ao clicar em um link
+        const links = document.querySelectorAll('.links');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                alert('Você clicou em ' + this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>
